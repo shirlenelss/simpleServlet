@@ -25,11 +25,10 @@ public class SimpleServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("hello from get method");
+		System.out.println("hello from get method<br>");
 		PrintWriter printwriter = response.getWriter();
-		printwriter.println("<h3>hello from get method<h3>");
+		printwriter.println("<h3>hello from get method<h3><br>");
 		printwriter.println("method " + request.getMethod().toString());
-		//printwriter.println("RequestedSession " + request.getRequestedSessionId().toString());
 	}
 
 }
