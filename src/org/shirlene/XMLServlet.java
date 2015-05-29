@@ -42,7 +42,6 @@ public class XMLServlet extends HttpServlet {
 			}
 		} else {
 			printwriter.println("<br> no location selected");
-			printwriter.println("<br>test 124");
 		}
 	}
 
