@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,11 +17,17 @@ import javax.servlet.http.HttpServletResponse;
 		description = "A simple sevlet", 
 		urlPatterns = { 
 				"/SimpleServletPath", 
-				"/ServeMePath"
-		})
+				"/ServeMePath"},
+		initParams=@WebInitParam(name="defaultUser", value="John Doe"))
+//@WebInitParam can be configured in xml format too.....
+
 public class SimpleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	public void init(){
+		System.out.println("init = " + this.getServletConfig().getInitParameter("defaultUser"));
+	}
+	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */

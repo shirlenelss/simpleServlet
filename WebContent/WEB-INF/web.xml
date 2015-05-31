@@ -9,6 +9,11 @@
   <servlet>
 	  <servlet-name>xmlServlet</servlet-name>
 	  <servlet-class>org.shirlene.XMLServlet</servlet-class>
+	  <init-param>
+	  		<param-name>defaultName</param-name>
+	  		<param-value>Shirlene</param-value>
+	  
+	  </init-param>
   </servlet>
   <servlet-mapping>
   	  <servlet-name>xmlServlet</servlet-name>
